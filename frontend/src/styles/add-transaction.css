@@ -1,0 +1,62 @@
+.add-transaction-wrap {
+  max-width: 640px;
+}
+
+.type-toggle {
+  display: flex;
+  gap: 0;
+  background: var(--bg-main);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  margin-bottom: 28px;
+}
+
+.type-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: calc(var(--radius-sm) - 2px);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+.type-btn.active.expense {
+  background: var(--white);
+  color: var(--danger);
+  box-shadow: var(--shadow-sm);
+}
+
+.type-btn.active.income {
+  background: var(--white);
+  color: var(--green-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.type-btn:hover:not(.active) {
+  color: var(--text-main);
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
