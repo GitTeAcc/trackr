@@ -16,7 +16,11 @@ async function connectDB() {
 
 connectDB();
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/auth"));
@@ -26,7 +30,7 @@ app.use("/api/budgets", require("./routes/budgets"));
 app.use("/api/reports", require("./routes/reports"));
 app.use("/api/household", require("./routes/household"));
 
-app.get("/", (req, res) => res.json({ message: "" }));
+app.get("/api/check", (req, res) => res.json({ message: "Backend is running" }));
 
 
 const PORT = process.env.PORT || 5000;
