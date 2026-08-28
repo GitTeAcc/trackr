@@ -70,7 +70,7 @@ export default function AddTransaction() {
 
         <div className="add-transaction-wrap">
           <div className="card">
-            {error   && <div className="alert alert-error">{error}</div>}
+            {error && <div className="alert alert-error">{error}</div>}
             {success && <div className="alert alert-success">Transaction added! Redirecting...</div>}
 
             <div className="type-toggle">
